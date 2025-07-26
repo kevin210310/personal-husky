@@ -1,3 +1,10 @@
+## Husky
+
+Es una librería de JavaScript utilizada para gestionar hooks de Git en proyectos de desarrollo de software. Los hooks de Git son scripts que se ejecutan automáticamente en respuesta a ciertos eventos de Git, como antes de un commit o un push. Husky facilita la configuración y el uso de estos hooks, permitiendo a los desarrolladores automatizar tareas como el linting (verificación de estilo) y las pruebas, mejorando la calidad del código. 
+
+
+
+
 ## Pasos para crear una nueva tarea
 
 ### 1. Preparación inicial
