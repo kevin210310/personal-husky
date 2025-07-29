@@ -1,0 +1,25 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "git checkout main\r git pull origin main",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "create-branch": "bash ./create-branch.sh",
+    "validate-branch": "bash .husky/post-checkout"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevin210310/commits.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevin210310/commits/issues"
+  },
+  "homepage": "https://github.com/kevin210310/commits#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

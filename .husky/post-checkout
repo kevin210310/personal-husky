@@ -1,0 +1,4 @@
+echo "Ejecutando script post checkout"
+
+# Ejecutar el validador JavaScript
+node .husky/scripts/validate-new-branch.js
