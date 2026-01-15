@@ -66,54 +66,47 @@ proyecto/
 ```
 
 
+## Hooks más Comunes
+### 1. Pre-commit
 
+Se ejecuta antes de crear un commit. Útil para linting y formateo.
+```bash
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
+npm run lint
+npm run format
+```
 
-## Pasos para crear una nueva tarea
+### 2. Commit-msg
 
-### 1. Preparación inicial
-# Asegurarte de estar en la rama principal actualizada
-git checkout main
-git pull origin main
+Valida el mensaje del commit. Útil para convenciones como Conventional Commits.
+```bash
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
-# Verificar el estado
-git status
+npx --no -- commitlint --edit $1
+```
 
-2. Crear rama con nomenclatura consistente
-# Nomenclatura recomendada: tipo/descripcion-corta
-git checkout -b feature/implementar-login
-git checkout -b fix/corregir-validacion-email
-git checkout -b hotfix/error-critico-pago
-git checkout -b chore/actualizar-dependencias
+### 3. Pre-push
 
+Se ejecuta antes de hacer push. Útil para ejecutar tests completos.
 
-3. Trabajar en la rama
-# Hacer cambios y commits frecuentes
-git add .
-git commit -m "feat: agregar formulario de login"
+```bash
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
-git add src/validation.js
-git commit -m "feat: agregar validación de email"
+npm run test:unit
+npm run test:integration
+```
 
-# Commits atómicos y descriptivos
-git add tests/
-git commit -m "test: agregar pruebas para login"
+### 4. Post-merge
 
-4. Mantener la rama actualizada
-# Traer cambios de main periódicamente
-git checkout main
-git pull origin main
-git checkout feature/implementar-login
-git merge main
+Se ejecuta después de un merge. Útil para instalar dependencias nuevas.
 
-# O usando rebase (mantiene historial más limpio)
-git rebase main
+```bash
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
-5. Subir la rama al repositorio remoto
-# Primera vez
-git push -u origin feature/implementar-login
-
-# Siguientes pushes
-git push
-
-#commit dos
+npm install
+```
