@@ -1,13 +1,10 @@
 {
   "name": "index",
   "version": "1.0.0",
-  "description": "git checkout main\r git pull origin main",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
-    "create-branch": "bash ./create-branch.sh",
-    "validate-branch": "bash .husky/post-checkout"
   },
   "repository": {
     "type": "git",
@@ -20,6 +17,6 @@
   },
   "homepage": "https://github.com/kevin210310/commits#readme",
   "devDependencies": {
-    "husky": "^9.1.7"
+    "husky": "9.1.7"
   }
 }
