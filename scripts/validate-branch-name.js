@@ -44,8 +44,6 @@ const validateBranchName = (branchName) => {
 };
 
 const main = () => {
-    console.log("inicio");
-    
   const currentBranch = getCurrentBranch();
   const validation = validateBranchName(currentBranch);
   
