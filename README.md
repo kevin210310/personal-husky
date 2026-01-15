@@ -28,6 +28,7 @@ Husky es una herramienta que facilita el uso de **Git hooks** en proyectos de No
 * Prevenir commits en ramas protegidas
 
 ## Instalación
+### Método 1: Instalación automática
 ```bash
 # npm
 npx husky-init && npm install
@@ -37,6 +38,17 @@ pnpm dlx husky-init && pnpm install
 
 # yarn
 npx husky-init && yarn
+```
+### Método 2: Instalación manual
+```bash
+# Instalar husky
+npm install --save-dev husky
+
+# Inicializar husky
+npx husky install
+
+# Añadir script en package.json para habilitar Git hooks después de install
+npm pkg set scripts.prepare="husky install"
 ```
 ## Configuración Básica
 ### Estructura de archivos:
