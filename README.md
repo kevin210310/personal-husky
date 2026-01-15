@@ -1,6 +1,58 @@
-## Husky
+# Guía Completa de Husky
+## ¿Qué es Husky?
 
-Es una librería de JavaScript utilizada para gestionar hooks de Git en proyectos de desarrollo de software. Los hooks de Git son scripts que se ejecutan automáticamente en respuesta a ciertos eventos de Git, como antes de un commit o un push. Husky facilita la configuración y el uso de estos hooks, permitiendo a los desarrolladores automatizar tareas como el linting (verificación de estilo) y las pruebas, mejorando la calidad del código. 
+Husky es una herramienta que facilita el uso de **Git hooks** en proyectos de Node.js. Los Git hooks son scripts que Git ejecuta automáticamente antes o después de eventos específicos como commits, push, merge, etc.
+
+### Características principales:
+* ✅ Fácil configuración y uso
+* ✅ Soporte para todos los Git hooks
+* ✅ Compatible con cualquier herramienta (ESLint, Prettier, tests, etc.)
+* ✅ Ligero y rápido
+* ✅ Sin dependencias pesadas
+
+## ¿Por qué usar Husky?
+### Beneficios:
+
+1. **Calidad de código:** Ejecuta linters y formateadores antes de cada commit.
+2. **Prevención de errores:** Ejecuta tests automáticamente antes de push.
+3. **Estandarización:** Asegura que todo el equipo siga las mismas reglas.
+4. **Automatización:** Reduce trabajo manual y errores humanos
+5. **CI/CD local:** Detecta problemas antes de subirlos al repositorio
+
+### Casos de uso comunes:
+
+* Formatear código automáticamente antes de commit
+* Validar mensajes de commit según convenciones
+* Ejecutar tests antes de push
+* Verificar que no haya código con errores de linting
+* Prevenir commits en ramas protegidas
+
+## Instalación
+```bash
+# npm
+npx husky-init && npm install
+
+# pnpm
+pnpm dlx husky-init && pnpm install
+
+# yarn
+npx husky-init && yarn
+```
+## Configuración Básica
+### Estructura de archivos:
+
+```
+proyecto/
+├── .husky/
+│   ├── _/
+│   │   └── husky.sh
+│   ├── pre-commit
+│   ├── commit-msg
+│   └── pre-push
+├── package.json
+└── ...
+```
+
 
 
 
