@@ -38,8 +38,20 @@ pnpm dlx husky-init && pnpm install
 # yarn
 npx husky-init && yarn
 ```
+## Configuración Básica
+### Estructura de archivos:
 
-
+```
+proyecto/
+├── .husky/
+│   ├── _/
+│   │   └── husky.sh
+│   ├── pre-commit
+│   ├── commit-msg
+│   └── pre-push
+├── package.json
+└── ...
+```
 
 
 
